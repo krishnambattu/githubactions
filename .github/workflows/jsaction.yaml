@@ -11,7 +11,7 @@ jobs:
 
       - name: simple jason
         id: greet
-        uses: actions/hello-world-java-action@v1
+        uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: Sunil
       - name: Greeting time

@@ -1,4 +1,4 @@
-name: Shell Commands
+name:  test1
 on: [push]
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
          echo $GITHUB_SHA
          echo $GITHUB_REPOSITORY
          echo $GITHUB_WORKSPACE
-         echo "{{github.token}}"
+         echo "${{github.token}}"
 
       - name: checkout
         uses: actions/checkout@v1

@@ -1,31 +1,11 @@
 name:  test1
-on: [push, pull_request]
-
+on:
+ schedule:
+    - cron:  '* * * * *'    
 jobs:
-
-  run-github-actions:
-
+  say_hello:
     runs-on: ubuntu-latest
-
     steps:
-
-      - name: simple jason
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: Sunil
-      - name: Greeting time
-        run: echo "${{ steps.greet.outputs.time}}"
-      
-      - name: list files
-        run: |
-         pwd
-         ls
-         echo $GITHUB_SHA
-         echo $GITHUB_REPOSITORY
-         echo $GITHUB_WORKSPACE
-         echo "${{github.token}}"
-
-      - name: checkout
-        uses: actions/checkout@v1
-
+      - run: |
+          echo "Hello ${{ github.event.inputs.name }}!"
+          echo "- in ${{ github.event.inputs.home }}!"

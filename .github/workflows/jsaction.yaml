@@ -1,7 +1,6 @@
 name:  test1
-on: [push]
 schedule:
-    - cron:  '*/1 * * * *'    
+    - cron:  '*/5 * * * *'    
 jobs:
 
   run-github-actions:

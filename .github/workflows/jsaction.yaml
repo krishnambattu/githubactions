@@ -1,4 +1,4 @@
-name:  run jon every 5min
+name:  "run-jon-every-5min"
 on:
  schedule:
     - cron:  '*/5 * * * *' # for every 5min #    

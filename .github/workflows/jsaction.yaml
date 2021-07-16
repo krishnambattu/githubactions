@@ -1,7 +1,7 @@
 name:  run jon every 5min
 on:
  schedule:
-    - cron:  '* * * * *'    
+    - cron:  '*/5 * * * *'    
 jobs:
   say_hello:
     runs-on: ubuntu-latest

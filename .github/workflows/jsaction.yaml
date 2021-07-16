@@ -1,5 +1,6 @@
 name:  test1
-schedule:
+on:
+ schedule:
     - cron:  '*/5 * * * *'    
 jobs:
 
